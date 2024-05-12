@@ -14,9 +14,19 @@
 	background-attachment: fixed;
 }
 
-
-@mixin islandCardStyles{
+@mixin islandCardStyles {
 	position: absolute;
 	left: 50%;
 	transform: translate(-50%);
+}
+
+@mixin contactForm {
+	margin-bottom: 2em;
+	padding: 0.6 em 5em;
+	border: none;
+	border-radius: 8px;
+	font-size: 2rem;
+	text-indent: 6px;
+	height: 30px;
+
 }
