@@ -45,6 +45,11 @@
   transform-origin: left;
 }
 
+.section-heading {
+  position: relative;
+  margin-bottom: 2em;
+}
+
 *,
 *::before,
 *::after {
