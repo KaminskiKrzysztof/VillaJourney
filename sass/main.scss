@@ -426,7 +426,7 @@ body {
 			transition: color 0.3s;
 
 			&::before {
-				background-color: $pure-white;
+				background-color: $light-white;
 			}
 		}
 	}
@@ -445,8 +445,6 @@ body {
 }
 
 .reviews {
-
-
 	&__box {
 		position: relative;
 		margin: 2em;
@@ -530,13 +528,17 @@ body {
 		color: $pure-white;
 		border: none;
 		border-radius: 8px;
-		background-color: $main-color;
+		background-color: $dark;
 		cursor: pointer;
+		transition: color 0.3s;
 
 		&::before {
-			background-color: $secondary-color;
+			background-color: $light-white;
 		}
+
+	
 	}
+	
 }
 
 // ================= FOOTER =====================

@@ -458,7 +458,7 @@ body {
   transition: color 0.3s;
 }
 .offers__option-btn::before {
-  background-color: #fff;
+  background-color: #eee;
 }
 .offers .offers__option-btn:hover {
   color: #2e2e2e;
@@ -554,9 +554,10 @@ body {
   border-radius: 8px;
   background-color: #2e2e2e;
   cursor: pointer;
+  transition: color 0.3s;
 }
 .contact__form-btn::before {
-  background-color: #164dcc;
+  background-color: #eee;
 }
 
 .footer {
