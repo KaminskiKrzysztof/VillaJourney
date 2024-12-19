@@ -16,7 +16,7 @@ html {
 }
 
 body {
-	font-family: 'Open Sans', sans-serif;
+	font-family: poppins, sans-serif;
 	font-size: 1.6rem;
 }
 
@@ -26,11 +26,10 @@ body {
 
 ::-webkit-scrollbar-thumb {
 	background-color: white;
-	border: 3px solid rgb(15, 30, 235);
 }
 
 ::-webkit-scrollbar-track {
-	background-color: rgba(62, 62, 205, 1);
+	background-color: $dark;
 }
 
 // ================= NAV =====================
@@ -166,7 +165,6 @@ body {
 	background-attachment: scroll;
 
 	&__heading {
-		font-family: 'Dancing Script', cursive;
 		font-size: 4.8rem;
 		font-weight: 300;
 	}
@@ -226,9 +224,19 @@ body {
 	text-align: center;
 	color: $pure-white;
 	overflow: hidden;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-direction: column;
+
+	.blur {
+		height: 30rem;
+		width: 100vh;
+		backdrop-filter: blur(10px);
+		border-radius: 25px;
+	}
 
 	&__title {
-		font-family: 'Dancing Script', cursive;
 		font-size: 4.8rem;
 		margin-bottom: 0.5em;
 	}
@@ -241,10 +249,12 @@ body {
 // ================= ISLANDS =====================
 
 .islands {
+	background-color: #ffffff;
 	&__card {
 		position: relative;
-		margin: 1em 0;
-		height: 450px;
+		margin: 5em 0;
+		height: 500px;
+
 		color: $pure-white;
 		text-align: center;
 		perspective: 1000px;
@@ -261,7 +271,6 @@ body {
 			}
 			.islands__card-info-btn:hover {
 				color: $dark;
-				transition: all 0.3s;
 			}
 		}
 
@@ -283,7 +292,7 @@ body {
 			}
 
 			&-title {
-				font-family: 'Dancing Script', cursive;
+				font-family: 'Poppins', cursive;
 				font-size: 3rem;
 			}
 			&-info {
@@ -316,7 +325,7 @@ body {
 			&-title {
 				@include islandCardStyles;
 				top: 1.2em;
-				font-family: 'Dancing Script', cursive;
+				font-family: 'Poppins', cursive;
 				font-size: 3rem;
 			}
 
@@ -345,6 +354,7 @@ body {
 				color: white;
 				background-color: $dark;
 				cursor: pointer;
+				transition: color 0.3s;
 
 				&::before {
 					background-color: white;
@@ -358,7 +368,7 @@ body {
 
 .offers {
 	position: relative;
-	@include heroImages('../img/maldives-640.jpg');
+	@include heroImages('../img/offersbgc.jpg');
 	overflow: hidden;
 
 	.section-heading {
@@ -374,6 +384,7 @@ body {
 
 		&-img {
 			width: 100%;
+
 			transition: transform 0.3s;
 
 			&:hover {
@@ -404,15 +415,20 @@ body {
 			padding: 0.8em;
 			width: 100%;
 			color: $pure-white;
-			background-color: $main-color;
+			background-color: $dark;
 			border: none;
 			border-radius: 8px;
 			cursor: pointer;
+			transition: color 0.3s;
 
 			&::before {
-				background-color: $secondary-color;
+				background-color: $pure-white;
 			}
 		}
+	}
+
+	.offers__option-btn:hover {
+		color: $dark;
 	}
 }
 
@@ -563,7 +579,6 @@ body {
 
 	&__bottom-text {
 		padding: 2em;
-		text-align: center;
 	}
 }
 
@@ -677,7 +692,7 @@ body {
 	.islands {
 		&__cards {
 			display: flex;
-			justify-content: center;
+			justify-content: space-evenly;
 			flex-wrap: wrap;
 		}
 
@@ -697,7 +712,7 @@ body {
 	// -------------------------------
 
 	.header {
-		background-image: $blue-gradient, url(../img/header.jpg);
+		background-image: url(../img/header.jpg);
 		&__heading {
 			font-size: 10rem;
 		}
@@ -734,7 +749,8 @@ body {
 
 	.hero-img {
 		padding: 33rem 2em;
-		background-image: $blue-gradient, url(../img/background1.jpg);
+		background-image: url(../img/background1.jpg);
+		background-size: cover;
 
 		&__title {
 			font-size: 7.2rem;
@@ -748,7 +764,7 @@ body {
 	// -------------------------------
 
 	.offers {
-		background-image: $blue-gradient, url('../img/maldives-1920.jpg');
+		background-image: url('../img/offersbgc.jpg');
 
 		&__opinion {
 			&-img {

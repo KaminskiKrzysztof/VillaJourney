@@ -2,13 +2,12 @@
 	position: absolute;
 	right: 0;
 	height: 3px;
-	content: "";
+	content: '';
 	background-color: $pure-white;
 	transition: width 0.3s;
 }
 
 @mixin heroImages($bgImg) {
-	background-image: $blue-gradient, url($bgImg);
 	background-size: cover;
 	background-position: center;
 	background-attachment: fixed;
@@ -22,11 +21,10 @@
 
 @mixin contactForm {
 	margin-bottom: 2em;
-	padding: 0.6 em 5em;
+	padding: 0.6em 5em;
 	border: none;
 	border-radius: 8px;
 	font-size: 2rem;
 	text-indent: 6px;
 	height: 30px;
-
 }

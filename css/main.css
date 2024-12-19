@@ -52,7 +52,7 @@
   font-weight: 300;
   text-transform: uppercase;
   text-align: center;
-  color: #1755e7;
+  color: #2e2e2e;
   letter-spacing: 2px;
 }
 
@@ -94,7 +94,7 @@ html {
 }
 
 body {
-  font-family: "Open Sans", sans-serif;
+  font-family: poppins, sans-serif;
   font-size: 1.6rem;
 }
 
@@ -104,11 +104,10 @@ body {
 
 ::-webkit-scrollbar-thumb {
   background-color: white;
-  border: 3px solid rgb(15, 30, 235);
 }
 
 ::-webkit-scrollbar-track {
-  background-color: rgb(62, 62, 205);
+  background-color: #2e2e2e;
 }
 
 .burger-btn {
@@ -224,14 +223,12 @@ body {
   height: 75vh;
   text-align: center;
   color: #fff;
-  background-image: linear-gradient(45deg, rgba(20, 105, 241, 0.75), rgba(42, 10, 184, 0.75)), url("../img/header-small.jpg");
   background-size: cover;
   background-position: center;
   background-attachment: fixed;
   background-attachment: scroll;
 }
 .header__heading {
-  font-family: "Dancing Script", cursive;
   font-size: 4.8rem;
   font-weight: 300;
 }
@@ -274,16 +271,25 @@ body {
 .hero-img {
   position: relative;
   padding: 10em 2em;
-  background-image: linear-gradient(45deg, rgba(20, 105, 241, 0.75), rgba(42, 10, 184, 0.75)), url("../img/background1-small.jpg");
   background-size: cover;
   background-position: center;
   background-attachment: fixed;
   text-align: center;
   color: #fff;
   overflow: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+.hero-img .blur {
+  height: 30rem;
+  width: 100vh;
+  -webkit-backdrop-filter: blur(10px);
+          backdrop-filter: blur(10px);
+  border-radius: 25px;
 }
 .hero-img__title {
-  font-family: "Dancing Script", cursive;
   font-size: 4.8rem;
   margin-bottom: 0.5em;
 }
@@ -291,10 +297,13 @@ body {
   padding: 1em 0;
 }
 
+.islands {
+  background-color: #ffffff;
+}
 .islands__card {
   position: relative;
-  margin: 1em 0;
-  height: 450px;
+  margin: 5em 0;
+  height: 500px;
   color: #fff;
   text-align: center;
   perspective: 1000px;
@@ -309,7 +318,6 @@ body {
 }
 .islands__card:hover .islands__card-info-btn:hover {
   color: #2e2e2e;
-  transition: all 0.3s;
 }
 .islands__card-img {
   padding: 2em;
@@ -328,7 +336,7 @@ body {
   background-image: url("../img/serenityvilla.jpg");
 }
 .islands__card-img-title {
-  font-family: "Dancing Script", cursive;
+  font-family: "Poppins", cursive;
   font-size: 3rem;
 }
 .islands__card-img-info {
@@ -360,7 +368,7 @@ body {
   left: 50%;
   transform: translate(-50%);
   top: 1.2em;
-  font-family: "Dancing Script", cursive;
+  font-family: "Poppins", cursive;
   font-size: 3rem;
 }
 .islands__card-info-list {
@@ -387,6 +395,7 @@ body {
   color: white;
   background-color: #2e2e2e;
   cursor: pointer;
+  transition: color 0.3s;
 }
 .islands__card-info-btn::before {
   background-color: white;
@@ -394,7 +403,6 @@ body {
 
 .offers {
   position: relative;
-  background-image: linear-gradient(45deg, rgba(20, 105, 241, 0.75), rgba(42, 10, 184, 0.75)), url("../img/maldives-640.jpg");
   background-size: cover;
   background-position: center;
   background-attachment: fixed;
@@ -437,13 +445,17 @@ body {
   padding: 0.8em;
   width: 100%;
   color: #fff;
-  background-color: #1755e7;
+  background-color: #2e2e2e;
   border: none;
   border-radius: 8px;
   cursor: pointer;
+  transition: color 0.3s;
 }
 .offers__option-btn::before {
-  background-color: #164dcc;
+  background-color: #fff;
+}
+.offers .offers__option-btn:hover {
+  color: #2e2e2e;
 }
 
 @media (max-width: 767px) {
@@ -478,7 +490,7 @@ body {
 .reviews__box-quote {
   margin-bottom: 1em;
   font-size: 3rem;
-  color: #1755e7;
+  color: #2e2e2e;
 }
 .reviews_-box-text {
   margin-bottom: 1em;
@@ -504,7 +516,7 @@ body {
 }
 .contact__form-input {
   margin-bottom: 2em;
-  padding: 0.6 em 5em;
+  padding: 0.6em 5em;
   border: none;
   border-radius: 8px;
   font-size: 2rem;
@@ -513,7 +525,7 @@ body {
 }
 .contact__form-textarea {
   margin-bottom: 2em;
-  padding: 0.6 em 5em;
+  padding: 0.6em 5em;
   border: none;
   border-radius: 8px;
   font-size: 2rem;
@@ -534,7 +546,7 @@ body {
   color: #fff;
   border: none;
   border-radius: 8px;
-  background-color: #1755e7;
+  background-color: #2e2e2e;
   cursor: pointer;
 }
 .contact__form-btn::before {
@@ -655,7 +667,7 @@ body {
   }
   .islands__cards {
     display: flex;
-    justify-content: center;
+    justify-content: space-evenly;
     flex-wrap: wrap;
   }
   .islands__card {
@@ -669,7 +681,7 @@ body {
     right: 50px;
   }
   .header {
-    background-image: linear-gradient(45deg, rgba(20, 105, 241, 0.75), rgba(42, 10, 184, 0.75)), url(../img/header.jpg);
+    background-image: url(../img/header.jpg);
   }
   .header__heading {
     font-size: 10rem;
@@ -694,7 +706,8 @@ body {
   }
   .hero-img {
     padding: 33rem 2em;
-    background-image: linear-gradient(45deg, rgba(20, 105, 241, 0.75), rgba(42, 10, 184, 0.75)), url(../img/background1.jpg);
+    background-image: url(../img/background1.jpg);
+    background-size: cover;
   }
   .hero-img__title {
     font-size: 7.2rem;
@@ -704,7 +717,7 @@ body {
     max-width: 900px;
   }
   .offers {
-    background-image: linear-gradient(45deg, rgba(20, 105, 241, 0.75), rgba(42, 10, 184, 0.75)), url("../img/maldives-1920.jpg");
+    background-image: url("../img/offersbgc.jpg");
   }
   .offers__opinion-img {
     -o-object-fit: cover;
