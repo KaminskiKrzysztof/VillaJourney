@@ -98,6 +98,19 @@ body {
   font-size: 1.6rem;
 }
 
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: white;
+  border: 3px solid rgb(15, 30, 235);
+}
+
+::-webkit-scrollbar-track {
+  background-color: rgb(62, 62, 205);
+}
+
 .burger-btn {
   position: fixed;
   top: 20px;
@@ -211,7 +224,7 @@ body {
   height: 75vh;
   text-align: center;
   color: #fff;
-  background-image: linear-gradient(45deg, rgba(20, 105, 241, 0.75), rgba(42, 10, 184, 0.75)), url("../img/palmy-small.jpg");
+  background-image: linear-gradient(45deg, rgba(20, 105, 241, 0.75), rgba(42, 10, 184, 0.75)), url("../img/header-small.jpg");
   background-size: cover;
   background-position: center;
   background-attachment: fixed;
@@ -249,6 +262,7 @@ body {
 .dreams__img {
   width: 100%;
   margin-bottom: 1em;
+  border-radius: 20px;
 }
 .dreams__title {
   margin-bottom: 0.5em;
@@ -260,7 +274,7 @@ body {
 .hero-img {
   position: relative;
   padding: 10em 2em;
-  background-image: linear-gradient(45deg, rgba(20, 105, 241, 0.75), rgba(42, 10, 184, 0.75)), url("../img/polynesia-640p.jpg");
+  background-image: linear-gradient(45deg, rgba(20, 105, 241, 0.75), rgba(42, 10, 184, 0.75)), url("../img/background1-small.jpg");
   background-size: cover;
   background-position: center;
   background-attachment: fixed;
@@ -293,31 +307,35 @@ body {
   transform: rotateY(0);
   opacity: 1;
 }
+.islands__card:hover .islands__card-info-btn:hover {
+  color: #2e2e2e;
+  transition: all 0.3s;
+}
 .islands__card-img {
   padding: 2em;
   height: 100%;
-  border-radius: 8px;
+  border-radius: 20px;
   background-size: cover;
   transition: transform 1s, opacity 1s;
 }
 .islands__card-img--first {
-  background-image: linear-gradient(45deg, rgba(8, 206, 255, 0.75), rgba(8, 24, 255, 0.75)), url("../img/water-640p.jpg");
+  background-image: url("../img/firstvilla.jpg");
 }
 .islands__card-img--second {
-  background-image: linear-gradient(45deg, rgba(20, 105, 241, 0.75), rgba(42, 10, 184, 0.75)), url("../img/boat-640p.jpg");
+  background-image: url("../img/villasecond.jpg");
 }
 .islands__card-img--third {
-  background-image: linear-gradient(45deg, rgba(190, 10, 214, 0.75), rgba(68, 0, 255, 0.75)), url("../img/hawaii-640p.jpg");
+  background-image: url("../img/serenityvilla.jpg");
 }
 .islands__card-img-title {
   font-family: "Dancing Script", cursive;
-  font-size: 2.8rem;
+  font-size: 3rem;
 }
 .islands__card-img-info {
   position: absolute;
   bottom: 30px;
   right: 30px;
-  font-size: 1.8rem;
+  font-size: 2rem;
 }
 .islands__card-img-info i {
   margin-right: 0.3em;
@@ -331,7 +349,7 @@ body {
   display: flex;
   flex-direction: column;
   justify-content: center;
-  background-image: radial-gradient(circle at top right, rgb(0, 78, 255) 0%, rgb(0, 212, 255) 100%);
+  background-color: #2e2e2e;
   border-radius: 8px;
   transform: rotateY(180deg);
   transition: transform 1s, opacity 1s;
@@ -343,7 +361,7 @@ body {
   transform: translate(-50%);
   top: 1.2em;
   font-family: "Dancing Script", cursive;
-  font-size: 2.8rem;
+  font-size: 3rem;
 }
 .islands__card-info-list {
   margin: 0 auto;
@@ -366,11 +384,12 @@ body {
   border-radius: 8px;
   width: 80%;
   border: none;
-  background-color: #00ffaa;
+  color: white;
+  background-color: #2e2e2e;
   cursor: pointer;
 }
 .islands__card-info-btn::before {
-  background-color: #0fe29c;
+  background-color: white;
 }
 
 .offers {
@@ -389,6 +408,7 @@ body {
   box-shadow: 5px 5px 10px rgba(46, 46, 46, 0.1803921569);
   background-color: #fff;
   overflow: hidden;
+  border-radius: 20px;
 }
 .offers__option-img {
   width: 100%;
@@ -649,7 +669,7 @@ body {
     right: 50px;
   }
   .header {
-    background-image: linear-gradient(45deg, rgba(20, 105, 241, 0.75), rgba(42, 10, 184, 0.75)), url(../img/palmy-big.jpg);
+    background-image: linear-gradient(45deg, rgba(20, 105, 241, 0.75), rgba(42, 10, 184, 0.75)), url(../img/header.jpg);
   }
   .header__heading {
     font-size: 10rem;
@@ -674,7 +694,7 @@ body {
   }
   .hero-img {
     padding: 33rem 2em;
-    background-image: linear-gradient(45deg, rgba(20, 105, 241, 0.75), rgba(42, 10, 184, 0.75)), url(../img/polynesia-1920p.jpg);
+    background-image: linear-gradient(45deg, rgba(20, 105, 241, 0.75), rgba(42, 10, 184, 0.75)), url(../img/background1.jpg);
   }
   .hero-img__title {
     font-size: 7.2rem;

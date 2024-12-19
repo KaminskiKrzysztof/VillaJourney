@@ -1,6 +1,6 @@
-@import "./colors";
-@import "./components";
-@import "./mixins";
+@import './colors';
+@import './components';
+@import './mixins';
 
 *,
 *::before,
@@ -16,11 +16,22 @@ html {
 }
 
 body {
-	font-family: "Open Sans", sans-serif;
+	font-family: 'Open Sans', sans-serif;
 	font-size: 1.6rem;
 }
 
+::-webkit-scrollbar {
+	width: 10px;
+}
 
+::-webkit-scrollbar-thumb {
+	background-color: white;
+	border: 3px solid rgb(15, 30, 235);
+}
+
+::-webkit-scrollbar-track {
+	background-color: rgba(62, 62, 205, 1);
+}
 
 // ================= NAV =====================
 
@@ -103,7 +114,7 @@ body {
 
 		&::before {
 			position: absolute;
-			content: "";
+			content: '';
 			top: 0;
 			left: 0;
 			width: 3px;
@@ -133,7 +144,6 @@ body {
 	animation: navItemsAnimation 1s both;
 }
 
-
 .black-bars-color,
 .black-bars-color::after,
 .black-bars-color::before {
@@ -152,11 +162,11 @@ body {
 	height: 75vh;
 	text-align: center;
 	color: $pure-white;
-	@include heroImages("../img/palmy-small.jpg");
+	@include heroImages('../img/header-small.jpg');
 	background-attachment: scroll;
 
 	&__heading {
-		font-family: "Dancing Script", cursive;
+		font-family: 'Dancing Script', cursive;
 		font-size: 4.8rem;
 		font-weight: 300;
 	}
@@ -195,6 +205,7 @@ body {
 	&__img {
 		width: 100%;
 		margin-bottom: 1em;
+		border-radius: 20px;
 	}
 
 	&__title {
@@ -211,13 +222,13 @@ body {
 .hero-img {
 	position: relative;
 	padding: 10em 2em;
-	@include heroImages("../img/polynesia-640p.jpg");
+	@include heroImages('../img/background1-small.jpg');
 	text-align: center;
 	color: $pure-white;
 	overflow: hidden;
 
 	&__title {
-		font-family: "Dancing Script", cursive;
+		font-family: 'Dancing Script', cursive;
 		font-size: 4.8rem;
 		margin-bottom: 0.5em;
 	}
@@ -248,34 +259,38 @@ body {
 				transform: rotateY(0);
 				opacity: 1;
 			}
+			.islands__card-info-btn:hover {
+				color: $dark;
+				transition: all 0.3s;
+			}
 		}
 
 		&-img {
 			padding: 2em;
 			height: 100%;
-			border-radius: 8px;
+			border-radius: 20px;
 			background-size: cover;
 			transition: transform 1s, opacity 1s;
 
 			&--first {
-				background-image: $light-blue-gradient, url("../img/water-640p.jpg");
+				background-image: url('../img/firstvilla.jpg');
 			}
 			&--second {
-				background-image: $blue-gradient, url("../img/boat-640p.jpg");
+				background-image: url('../img/villasecond.jpg');
 			}
 			&--third {
-				background-image: $purple-gradient, url("../img/hawaii-640p.jpg");
+				background-image: url('../img/serenityvilla.jpg');
 			}
 
 			&-title {
-				font-family: "Dancing Script", cursive;
-				font-size: 2.8rem;
+				font-family: 'Dancing Script', cursive;
+				font-size: 3rem;
 			}
 			&-info {
 				position: absolute;
 				bottom: 30px;
 				right: 30px;
-				font-size: 1.8rem;
+				font-size: 2rem;
 
 				i {
 					margin-right: 0.3em;
@@ -292,7 +307,7 @@ body {
 			display: flex;
 			flex-direction: column;
 			justify-content: center;
-			background-image: $light-blue-gradient-solid;
+			background-color: $dark;
 			border-radius: 8px;
 			transform: rotateY(180deg);
 			transition: transform 1s, opacity 1s;
@@ -301,8 +316,8 @@ body {
 			&-title {
 				@include islandCardStyles;
 				top: 1.2em;
-				font-family: "Dancing Script", cursive;
-				font-size: 2.8rem;
+				font-family: 'Dancing Script', cursive;
+				font-size: 3rem;
 			}
 
 			&-list {
@@ -327,11 +342,12 @@ body {
 				border-radius: 8px;
 				width: 80%;
 				border: none;
-				background-color: $green-color;
+				color: white;
+				background-color: $dark;
 				cursor: pointer;
 
 				&::before {
-					background-color: $green-color-hover;
+					background-color: white;
 				}
 			}
 		}
@@ -342,7 +358,7 @@ body {
 
 .offers {
 	position: relative;
-	@include heroImages("../img/maldives-640.jpg");
+	@include heroImages('../img/maldives-640.jpg');
 	overflow: hidden;
 
 	.section-heading {
@@ -354,6 +370,7 @@ body {
 		box-shadow: 5px 5px 10px #2e2e2e2e;
 		background-color: $pure-white;
 		overflow: hidden;
+		border-radius: 20px;
 
 		&-img {
 			width: 100%;
@@ -680,7 +697,7 @@ body {
 	// -------------------------------
 
 	.header {
-		background-image: $blue-gradient, url(../img/palmy-big.jpg);
+		background-image: $blue-gradient, url(../img/header.jpg);
 		&__heading {
 			font-size: 10rem;
 		}
@@ -717,7 +734,7 @@ body {
 
 	.hero-img {
 		padding: 33rem 2em;
-		background-image: $blue-gradient, url(../img/polynesia-1920p.jpg);
+		background-image: $blue-gradient, url(../img/background1.jpg);
 
 		&__title {
 			font-size: 7.2rem;
@@ -731,7 +748,7 @@ body {
 	// -------------------------------
 
 	.offers {
-		background-image: $blue-gradient, url("../img/maldives-1920.jpg");
+		background-image: $blue-gradient, url('../img/maldives-1920.jpg');
 
 		&__opinion {
 			&-img {
