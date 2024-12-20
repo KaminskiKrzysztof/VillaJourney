@@ -223,6 +223,7 @@ body {
   height: 75vh;
   text-align: center;
   color: #fff;
+  background-image: url("../img/header-small.jpg");
   background-size: cover;
   background-position: center;
   background-attachment: fixed;
@@ -277,6 +278,7 @@ body {
 .hero-img {
   position: relative;
   padding: 10em 2em;
+  background-image: url("../img/background1-small.jpg");
   background-size: cover;
   background-position: center;
   background-attachment: fixed;
@@ -409,6 +411,7 @@ body {
 
 .offers {
   position: relative;
+  background-image: url("../img/offersbgc.jpg");
   background-size: cover;
   background-position: center;
   background-attachment: fixed;
